@@ -48,7 +48,7 @@ body {
 {
   font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
   margin-bottom:15px;
-  font-size:18px;
+  font-size:14px;
   font-weight:200
 }
 .container .main{border-radius:6px}
@@ -93,6 +93,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size:contain;
+  }
+  
+  .main p
+  {
+    font-size:18px;
   }
 }
 
