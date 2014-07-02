@@ -1,0 +1,98 @@
+body {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*.header,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}*/
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 30px;
+}
+
+.header h3 {
+  padding-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+.float-right {
+  float: right!important;
+  line-height: 40px;
+}
+
+.title-text{
+  color:#888
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.main {
+  padding: 20px;
+  margin-bottom:5px;
+  text-align: center;
+  background-color: #ffebeb;
+}
+
+.main p
+{
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin-bottom:15px;
+  font-size:18px;
+  font-weight:200
+}
+.container .main{border-radius:6px}
+
+.main-image
+{
+  margin-bottom:20px;
+}
+
+.footer {
+  padding-top: 5px;
+  color: #777;
+ /* border-top: 1px solid #e5e5e5;*/
+  font-size: 14px;
+}
+
+.footer p{
+  text-align: right;
+}
+
+
+/* Responsive: Portrait tablets and up */
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+/*
+@media screen and (min-width: 768px) {
+   Remove the padding we set earlier 
+  .header,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+*/
+
+a {
+  color: #444;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #ffaaaa;
+}
