@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>たすくまにゅある</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="stylesheet" href="help.css" type="text/css">
+            </head>
+    <body>
+        <h1>タスク詳細</h1>
+        <img src="help_taskdetail.png" width ="280"/>
+        <ul class="help">
+            <li>→<a href="#history">タスク名履歴</a>：タスク名フィールドの>ボタン</li>
+            <li>→<a href="#estimated">見積時間編集</a>：Estimated</li>
+            <li>→<a href="#project">プロジェクト編集</a>：Project</li>
+            <li>→<a href="#repeat">リピート編集</a>：Repeat</li>
+            <li>→<a href="#tag">タグ編集</a>：Tag</li>
+            <li>→<a href="#schedule">スケジュール時刻編集</a>：Schedule</li>
+            <li>→<a href="#time">開始時刻編集</a>：Start</li>
+            <li>→<a href="#time">終了時刻編集</a>：End</li>
+            <li>→<a href="#section">セクション編集</a>：Section</li>
+            <li>タスク評価を編集：Rate</li>
+            <li>→<a href="#memo">メモ編集</a>：Memo</li>
+            <li>→<a href="checklist.html">チェックリスト</a>：左スワイプorボタンタップ</li>
+            <li>→前/次タスク：上下スワイプ</li>
+        </ul>
+        
+        <ol class="help">
+            <li>アクション実行
+                <ul>
+                    <li>タスク削除</li>
+                    <li>Twitterに送る</li>
+                    <li>Evernoteに送る</li>
+                    <li>Mailで送る</li>
+                    <li>リピートタスクを作成する</li>
+                    <li>タスクを複製する</li>
+                </ul>
+            </li>
+            <li>タスク開始・終了</li>
+            <li>タスク中断</li>
+            <li>→<a href="#map">位置情報・チェックイン履歴を表示、編集</a></li>
+            <li><a href="#duedate">タスク日付を編集</a></li>
+            <li>タスク日付を削除：長押し</li>
+        </ol>
+        
+        <h1 id="history">タスク名履歴</h1>
+        <img src="help_taskname_history.png" width ="280"/>
+        <ul class="help">
+            <li>過去に開始済みのタスクのうち、リピート設定されていないもののタスク名を表示</li>
+            <li>→タスク名を設定して戻る：行選択</li>
+        </ul>
+        
+        <h1 id="estimated">見積時間編集</h1>
+        <img src="help_estimated.png" width ="280"/>
+        <ol class="help">
+            <li>見積時間クリア</li>
+            <li>一桁削除</li>
+            <li>各数字入力（0〜9）</li>
+            <li>時間-分区切り入力</li>
+            ※分のみで入力しても時間:分の形式に変換されます。<br/>
+            　例：90と入力→1:30
+            <li>→保存して戻る</li>
+        </ol>
+        
+        <h1 id="project">プロジェクト編集</h1>
+        <img src="help_task_edit_project.png" width ="280"/>
+        <ol class="help">
+            <li>→プロジェクトを設定して戻る：行選択</li>
+            <li>編集モード切替</br>
+                <img src="help_task_edit_project_edit.png" width ="280"/>
+                <ul>
+                    <li>プロジェクト追加：New Project行選択</li>
+                    <li>プロジェクト名編集：行選択</li>
+                    <li>プロジェクト削除：削除ボタンタップ</li>
+                </ul>
+            </li>
+        </ol>
+        
+        <h1 id="repeat">リピート編集</h1>
+        <img src="help_task_edit_repeat.png" width ="280"/>
+        <ol class="help">
+            <li>→リピートタスクを設定して戻る：行選択
+                <ul>
+                    <li>タスク名が空欄の場合は、リピートタスク名が入ります</li>
+                    <li>見積時間が未設定の場合は、リピートタスクの見積時間が設定されます</li>
+                    <li>プロジェクトが未設定の場合は、リピートタスクのプロジェクトが設定されます</li>
+                    <li>Sectionが未設定の場合は、リピートタスクのSectionが設定されます</li>
+                    <li>スケジュール時刻が未設定の場合は、リピートタスクのスケジュール時刻が設定されます</li>
+                    <li>チェックリストに、リピートタスクのチェックリストが追加されます</li>
+                    <li>メモに、リピートタスクのメモが追加されます</li>
+                </ul>
+            </li>
+            <li>プロジェクトによるフィルタを切り替える</li>
+            <li>→<a href="repeatdetail.html">リピート詳細</a>：行ダブルタップ</li>
+        </ol>
+        
+        <h1 id="tag">タグ編集</h1>
+        <ol class="help">
+            <li>タグ設定：Evernoteタグ一覧から選択、または直接入力</li>
+            <li>→保存して戻る</li>
+        </ol>
+        
+        <h1 id="schedule">スケジュール時刻編集</h1>
+        <img src="help_schedule.png" width ="280"/>
+        <ol class="help">
+            <li>スケジュール時刻クリア</li>
+            <li>一桁削除</li>
+            <li>各数字入力</li>
+            <li>時間-分区切り入力</li>
+            ※2桁入力すると、自動入力される
+            <li>→保存して戻る</li>
+        </ol>
+        
+        <h1 id="time">開始時刻編集・終了時刻編集</h1>
+        <img src="help_time_edit.png" width ="280"/>
+        <ol class="help">
+            <li>日付表示モードの切替</li>
+            ※Logリスト画面からタスク詳細画面を表示した場合は、日付表示モードで表示されます
+            <img src="help_time_edit_datemode.png" width ="280"/>
+            <li>→保存して戻る</li>
+        </ol>
+        
+        <h1 id="section">セクション編集</h1>
+        <img src="help_task_edit_zone.png" width ="280"/>
+        <ol class="help">
+            <li>→セクションを設定して戻る：行選択</li>
+        </ol>
+        
+        <h1 id="memo">メモ編集</h1>
+        <img src="help_memolist.png" width ="280"/>
+        <ol class="help">
+            <li>Mail送信：メモ選択→Send</li>
+            <li>Evernote送信：メモ選択→Send</li>
+            <li>Facebook送信：メモ選択→Share</li>
+            <li>Twitter送信：メモ選択→Tweet</li>
+            <li>画像メモ追加（カメラ起動）</li>
+            <li>画像メモ追加（ライブラリ）
+                <ul>
+                    <li>ライブラリから選択：シングルタップ</li>
+                    <li>最新写真を追加：ダブルタップ</li>
+                </ul>
+            </li>
+            <li>テキストメモ追加：テキストエリアタップ</li>
+            <li>テキストメモ編集：テキストメモ行選択</li>
+            <li>→画像フル表示：画像メモ行選択</li>
+            <li>メモ日付編集：行長押し</li>
+        </ol>
+        
+        <h1 id="map">タスク地図</h1>
+        <ol class="help">
+            <li>各種位置情報表示
+                <ul>
+                    <li>青ポイント：現在地</li>
+                    <li>赤ピン：タスク位置（ドラッグで位置編集可能）</li>
+                    <li>緑ピン：foursquareチェックイン位置</li>
+                </ul>
+            </li>
+            <li>タスク位置を現在地に変更</li>
+            <li>選択したピンを削除</li>
+            <li>→タスク詳細に戻る</li>
+        </ol>
+        
+        <h1 id="duedate">タスク日付編集</h1>
+        <img src="help_duedate.png" width ="280"/>
+        <ol class="help">
+            <li>タスク日付を変更して閉じる</li>
+            <li>タスク日付を変更せずに閉じる</li>
+            <li>明日の日付を選択する</li>
+        </ol>
+
+        <a href="top.html">→Help Topへ</a> <a href="/">→Taskuma Topへ</a>
+    </body>
+</html>
