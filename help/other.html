@@ -17,10 +17,67 @@
         </ul>
         
         <h2 id="url">URLスキーム</h2>
+        <h3>たすくまを開く</h3>
+        taskuma://</br>
+        これが基本のスキームです。</br>
+        その他に、URLスキームを利用して、タスクの追加・開始(+終了/中断)・バックアップ画面への遷移が可能です。</br>
+        追加・開始・バックアップ画面への遷移はそれぞれ他のアプリから呼び出し、コールバックすることも可能です。</br>
+        
+        <h3>追加</h3>
+        <p class = "breakAll">
+        taskuma://add?taskname=xxx&amp;estimated=xxx</p>
+        taskname, estimatedは省略可能です。</br>
+        
+        <h3>開始</h3>
+        <p class = "breakAll">
+        taskuma://start?new=yes&amp;end=yes&amp;taskname=xxx&amp;estimated=xxx</p>
+        開始するタスクは、1番上のタスクか、新規タスク(new=yes)を指定できます。</br>
+        終了するタスクは、実行中のタスクのうち、一番最初に開始したものです。終了(end=yes)か、中断(suspend=yes)を指定できます。(両方指定した場合には、中断)</br>
+        新規タスク開始(new=yes)の場合には、taskname,estimatedを指定することができます。</br>
+        
+        <h3>Dropboxバックアップ画面への遷移</h3>
+        <p class = "breakAll">
+        taskuma://backup?</p>
+        
+        <h3>追加(コールバック)</h3>
+        <p class = "breakAll">
+        taskuma://x-callback-url/add?x-source=XXXX&amp;x-success=XXXX&amp;taskname=xxx&amp;estimated=xxx</p>
+        x-sourceは、コールバックするアプリの名称等を指定します。これは表示用です。</br>
+        x-successで、コールバックするアプリのURLスキームを指定します。</br>
+        
+        <h3>開始(コールバック)</h3>
+        <p class = "breakAll">
+        taskuma://x-callback-url/start?x-source=XXXX&amp;x-success=XXXX</p>
+        x-source, x-successは追加(コールバック)と同様です。</br>
+        それ以降のオプションは、開始(コールバック無し)と同様です。</br>
+        
+        <h3>Dropboxバックアップ画面への遷移(コールバック)</h3>
+        <p class = "breakAll">
+        taskuma://x-callback-url/backup?x-source=XXXX&amp;x-success=XXXX</p>
+        x-source, x-successは追加(コールバック)と同様です。</br>
+        
+        <h2>★URLスキームサンプル</h2>
+        <ul class="help breakAll">
+        <li>終了開始</li>
+        taskuma://start?end=yes</br>
+        <li>中断開始</li>
+        taskuma://start?suspend=yes</br>
+        <li>終了新規開始</li>
+        taskuma://start?new=yes&amp;end=yes</br>
+        <li>新規追加開始</li>
+        taskuma://start?new=yes&amp;taskname=xxx=estimated=xxx</br>
+        <li>コールバック付きで開く</li>
+        taskuma://x-callback-url/?x-success=xxx</br>
+        <li>中断新規開始コールバック</li>
+        taskuma://x-callback-url/start?x-success=xxx&amp;new=yes&amp;suspend=yes&amp;taskname=xxx&amp;estimated=xxx</br>
+        </ul>
+
+<!--
         <ul class="help breakAll">
             <li>taskuma:// で起動</li>
             <li>taskuma://add?taskname=xxx&amp;estimated=xxx でタスク追加（taskname, estimatedは省略可）</li>
         </ul>
+ -->
         
         <h2 id="notification">通知</h2>
         たすくまでは、開始時刻の設定されているタスクの開始時刻・実行中タスクの終了予定時刻・日次レポート作成時に通知を行います。</br>
@@ -41,11 +98,10 @@
        
        <h2 id="section">セクション設定の変更</h2>
        セクションの構成を変更した場合、全てのタスク（含ログ）と全てのリピートタスクに変更が反映されます。</br>
-       各タスク/リピートタスクは、「何時〜何時のセクションに属するか」ではなく、「何番目のセクションに属するか」という情報を持っています。</br>
-       例えば、「7〜9時、9〜11時、11〜13時...」というセクション構成で、11〜13時のセクションを設定したタスクは、「3番目のセクション」という情報を持っています。</br>
-       そのため、セクション構成を「7〜8時、8〜9時、9〜10時...」という風に変更した場合、このタスクのセクションは「9〜10時」に変更されることになります。</br>
+       各タスク/リピートタスクは、元のセクションの開始時刻が含まれるセクションに変更されます。</br>
+       例えば、「7〜9時、9〜11時、11〜13時...」というセクション構成を「7〜8時、8〜9時、9〜10時...」という風に変更した場合、「7〜9時」のセクションのタスクは「7〜8時」のセクションに、「9〜11時」のセクションのタスクは「9〜10時」のセクションに変更されることになります。</br>
        </br>
-       同様に、全部で10個のセクションを設定していたものを9個に減らした場合、10番目のセクションを設定していたタスクは、該当するセクションが無くなるので、セクションが空に変更されることになります。</br>
+       この際、タスクの開始予定時刻の設定は考慮しませんので、例えば開始予定時刻が8:20で「7〜9時」のセクションが設定されているタスクも、「8〜9時」のセクションではなく、「7〜8時」のセクションに変更されます。</br>
        </br>
        セクション構成を変更する際には、これらのことにご留意ください。</br>
        

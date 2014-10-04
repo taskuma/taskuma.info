@@ -11,15 +11,16 @@
         <h1>タスク詳細</h1>
         <img src="help_taskdetail.png" width ="280"/>
         <ul class="help">
+            <li>タスク名：Task Name（直接編集）</li>
             <li>→<a href="#history">タスク名履歴</a>：タスク名フィールドの>ボタン</li>
             <li>→<a href="#estimated">見積時間編集</a>：Estimated</li>
-            <li>→<a href="#project">プロジェクト編集</a>：Project</li>
-            <li>→<a href="#repeat">リピート編集</a>：Repeat</li>
+            <li>→<a href="#project">プロジェクト編集</a>：Project（スワイプでクリア）</li>
+            <li>→<a href="#repeat">リピート編集</a>：Repeat（スワイプでクリア）</li>
             <li>→<a href="#tag">タグ編集</a>：Tag</li>
-            <li>→<a href="#schedule">スケジュール時刻編集</a>：Schedule</li>
-            <li>→<a href="#time">開始時刻編集</a>：Start</li>
-            <li>→<a href="#time">終了時刻編集</a>：End</li>
-            <li>→<a href="#section">セクション編集</a>：Section</li>
+            <li>→<a href="#schedule">スケジュール時刻編集</a>：Schedule（スワイプでクリア）</li>
+            <li>→<a href="#time">開始時刻編集</a>：Start（スワイプでクリア、長押しで直前タスクの終了時刻を開始時刻としてタスク開始。また、時刻編集→保存でタスク開始。）</li>
+            <li>→<a href="#time">終了時刻編集</a>：End（スワイプでクリア、長押しで見積もり時間通りの実行時間になるようタスク終了。また、時刻編集→保存でタスク終了。）</li>
+            <li>→<a href="#section">セクション編集</a>：Section（スワイプでクリア）</li>
             <li>タスク評価を編集：Rate</li>
             <li>→<a href="#memo">メモ編集</a>：Memo</li>
             <li>→<a href="checklist.html">チェックリスト</a>：左スワイプorボタンタップ</li>
@@ -42,6 +43,10 @@
             <li>→<a href="#map">位置情報・チェックイン履歴を表示、編集</a></li>
             <li><a href="#duedate">タスク日付を編集</a></li>
             <li>タスク日付を削除：長押し</li>
+            <li>タスクに<ul>
+                <li>メモ追加：シングルタップ</li>
+                <li>4sq チェックイン追加：ダブルタップ</li>
+            </ul></li>
         </ol>
         
         <h1 id="history">タスク名履歴</h1>
@@ -67,7 +72,7 @@
         <img src="help_task_edit_project.png" width ="280"/>
         <ol class="help">
             <li>→プロジェクトを設定して戻る：行選択</li>
-            <li>編集モード切替</br>
+            <li>編集モード切替
                 <img src="help_task_edit_project_edit.png" width ="280"/>
                 <ul>
                     <li>プロジェクト追加：New Project行選択</li>
