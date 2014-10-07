@@ -1,0 +1,15 @@
+h1{font-size: 20px;}
+h2{font-size: 18px;}
+a:link { color: #ff9999; }
+a:visited { color: #ff9999; }
+a:hover { color: #ff9999; }
+a:active { color: #ff9999; }
+ul.help{ margin-left: 25px; padding-left:0px;}
+ol.help{ margin-left: 25px; padding-left:0px;}
+ul li ul {margin-left: 10px; padding:0;}
+ol li ul {margin-left: 10px; padding:0;}
+img{box-shadow:1px 1px 5px #000;}
+img.noshadow{box-shadow:0px 0px 0px #000;}
+.breakAll{
+    word-break: break-all;
+}

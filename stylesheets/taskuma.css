@@ -26,6 +26,10 @@ body {
   line-height: 40px;
 }
 
+.float-right a{
+  padding-left: 15px;
+}
+
 .title-text{
   color:#888
 }
