@@ -20,8 +20,15 @@
         <h3>たすくまを開く</h3>
         taskuma://</br>
         これが基本のスキームです。</br>
-        その他に、URLスキームを利用して、タスクの追加・開始(+終了/中断)・バックアップ画面への遷移が可能です。</br>
-        追加・開始・バックアップ画面への遷移はそれぞれ他のアプリから呼び出し、コールバックすることも可能です。</br>
+        その他に、URLスキームを利用して、タスクの
+        <ul class="help">
+            <li>追加</li>
+            <li>開始(+終了/中断)</li>
+            <li>終了/中断</li>
+            <li>バックアップ画面への遷移</li>
+        </ul>
+        が可能です。</br>
+        追加・開始・終了/中断・バックアップ画面への遷移はそれぞれ他のアプリから呼び出し、コールバックすることも可能です。</br>
         
         <h3>追加</h3>
         <p class = "breakAll">
@@ -34,6 +41,11 @@
         開始するタスクは、1番上のタスクか、新規タスク(new=yes)を指定できます。</br>
         終了するタスクは、実行中のタスクのうち、一番最初に開始したものです。終了(end=yes)か、中断(suspend=yes)を指定できます。(両方指定した場合には、中断)</br>
         新規タスク開始(new=yes)の場合には、taskname,estimatedを指定することができます。</br>
+        
+        <h3>終了/中断</h3>
+        <p class = "breakAll">
+        taskuma://end?suspend=yes</p>
+        終了するタスクは、実行中のタスクのうち、一番最初に開始したものです。終了(taskuma://end?)か、中断(taskuma://end?suspend=yes)を指定できます。</br>
         
         <h3>Dropboxバックアップ画面への遷移</h3>
         <p class = "breakAll">
@@ -50,6 +62,11 @@
         taskuma://x-callback-url/start?x-source=XXXX&amp;x-success=XXXX</p>
         x-source, x-successは追加(コールバック)と同様です。</br>
         それ以降のオプションは、開始(コールバック無し)と同様です。</br>
+        
+        <h3>終了/中断(コールバック)</h3>
+        taskuma://x-callback-url/end?x-source=XXXX&amp;x-success=XXXX</p>
+        x-source, x-successは追加(コールバック)と同様です。</br>
+        それ以降のオプションは、終了/中断(コールバック無し)と同様です。</br>
         
         <h3>Dropboxバックアップ画面への遷移(コールバック)</h3>
         <p class = "breakAll">
