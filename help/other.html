@@ -32,15 +32,16 @@
         
         <h3>追加</h3>
         <p class = "breakAll">
-        taskuma://add?taskname=xxx&amp;estimated=xxx</p>
-        taskname, estimatedは省略可能です。</br>
+        taskuma://add?taskname=xxx&amp;estimated=xxx&amp;project=xxx</p>
+        taskname, estimated, projectは省略可能です。</br>
+        指定したプロジェクトが存在しない場合には、新規作成されます。</br>
         
         <h3>開始</h3>
         <p class = "breakAll">
-        taskuma://start?new=yes&amp;end=yes&amp;taskname=xxx&amp;estimated=xxx</p>
+        taskuma://start?new=yes&amp;end=yes&amp;taskname=xxx&amp;estimated=xxx&amp;project=xxx</p>
         開始するタスクは、1番上のタスクか、新規タスク(new=yes)を指定できます。</br>
         終了するタスクは、実行中のタスクのうち、一番最初に開始したものです。終了(end=yes)か、中断(suspend=yes)を指定できます。(両方指定した場合には、中断)</br>
-        新規タスク開始(new=yes)の場合には、taskname,estimatedを指定することができます。</br>
+        新規タスク開始(new=yes)の場合には、taskname,estimated,projectを指定することができます。</br>
         
         <h3>終了/中断</h3>
         <p class = "breakAll">
@@ -53,7 +54,7 @@
         
         <h3>追加(コールバック)</h3>
         <p class = "breakAll">
-        taskuma://x-callback-url/add?x-source=XXXX&amp;x-success=XXXX&amp;taskname=xxx&amp;estimated=xxx</p>
+        taskuma://x-callback-url/add?x-source=XXXX&amp;x-success=XXXX&amp;taskname=xxx&amp;estimated=xxx&amp;project=xxx</p>
         x-sourceは、コールバックするアプリの名称等を指定します。これは表示用です。</br>
         x-successで、コールバックするアプリのURLスキームを指定します。</br>
         
@@ -82,11 +83,11 @@
         <li>終了新規開始</li>
         taskuma://start?new=yes&amp;end=yes</br>
         <li>新規追加開始</li>
-        taskuma://start?new=yes&amp;taskname=xxx=estimated=xxx</br>
+        taskuma://start?new=yes&amp;taskname=xxx&amp;estimated=xxx&amp;project=xxx</br>
         <li>コールバック付きで開く</li>
         taskuma://x-callback-url/?x-success=xxx</br>
         <li>中断新規開始コールバック</li>
-        taskuma://x-callback-url/start?x-success=xxx&amp;new=yes&amp;suspend=yes&amp;taskname=xxx&amp;estimated=xxx</br>
+        taskuma://x-callback-url/start?x-success=xxx&amp;new=yes&amp;suspend=yes&amp;taskname=xxx&amp;estimated=xxx&amp;project=xxx</br>
         </ul>
 
 <!--
