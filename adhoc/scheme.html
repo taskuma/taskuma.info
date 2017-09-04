@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width" />
+<title>Taskuma URL Scheme</title>
+</head>
+<body >
+<h2>URLスキーム</h2>
+<h3>たすくまを開く</h3>
+taskuma://</br>
+これが基本のスキームです。</br>
+その他に、URLスキームを利用して、タスクの追加・開始(+終了/中断)・バックアップ画面への遷移が可能です。</br>
+追加・開始・バックアップ画面への遷移はそれぞれ他のアプリから呼び出し、コールバックすることも可能です。</br>
+
+<h3>追加</h3>
+taskuma://add?taskname=xxx&estimated=xxx</br>
+taskname, estimatedは省略可能です。</br>
+
+<h3>開始</h3>
+taskuma://start?new=yes&end=yes&taskname=xxx&estimated=xxx</br>
+開始するタスクは、1番上のタスクか、新規タスク(new=yes)を指定できます。</br>
+終了するタスクは、実行中のタスクのうち、一番最初に開始したものです。終了(end=yes)か、中断(suspend=yes)を指定できます。(両方指定した場合には、中断)</br>
+新規タスク開始(new=yes)の場合には、taskname,estimatedを指定することができます。</br>
+
+<h3>Dropboxバックアップ画面への遷移</h3>
+taskuma://backup?</br>
+
+<h3>追加(コールバック)</h3>
+taskuma://x-callback-url/add?x-source=XXXX&x-success=XXXX&taskname=xxx&estimated=xxx</br>
+x-sourceは、コールバックするアプリの名称等を指定します。これは表示用です。</br>
+x-successで、コールバックするアプリのURLスキームを指定します。</br>
+
+<h3>開始(コールバック)</h3>
+taskuma://x-callback-url/start?x-source=XXXX&x-success=XXXX</br>
+x-source, x-successは追加(コールバック)と同様です。</br>
+それ以降のオプションは、開始(コールバック無し)と同様です。</br>
+
+<h3>Dropboxバックアップ画面への遷移(コールバック)</h3>
+taskuma://x-callback-url/backup?x-source=XXXX&x-success=XXXX</br>
+x-source, x-successは追加(コールバック)と同様です。</br>
+
+<h2>★サンプル</h2>
+・終了開始</br>
+taskuma://start?end=yes</br>
+・中断開始</br>
+taskuma://start?suspend=yes</br>
+・終了新規開始</br>
+taskuma://start?new=yes&end=yes</br>
+・新規追加開始</br>
+taskuma://start?new=yes&taskname=xxx=estimated=xxx</br>
+・コールバック付きで開く</br>
+taskuma://x-callback-url/?x-success=xxx</br>
+・中断新規開始コールバック</br>
+taskuma://x-callback-url/start?x-success=xxx&new=yes&suspend=yes&taskname=xxx&estimated=xxx</br>
+
+</body >
+</html >
