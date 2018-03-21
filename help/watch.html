@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>たすくまにゅある</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="stylesheet" href="help.css" type="text/css">
+            </head>
+    <body>
+        <h1>Apple Watch メイン画面</h1>
+        <img src="Watch_1_Main.png" width ="312"/>
+        <ol class="help">
+            <li>新規タスク開始</li>
+            入力文字列をタスク名として、新規タスクを開始。リピートタスク設定無し。</br>
+            ※入力候補は<a href="setting.html">設定画面</a>で変更できます。
+            <li>タスク検索→<a href="#search">検索結果</a></li>
+            ※入力候補は<a href="setting.html">設定画面</a>で変更できます。
+            <li>メモ追加（アクティブタスク）</li>
+            <li>実行中タスク一覧
+                <ul>
+                    <li>→<a href="#active">実行中タスク詳細</a>：行選択</li>
+                    <li>タスク終了：スワイプ</li>
+                </ul>
+            </li>
+            <li>セクションタスク一覧
+            現在時刻のセクションの未実行タスク
+                <ul>
+                    <li>→<a href="#task">タスク詳細</a>：行選択</li>
+                    <li>タスク開始：スワイプ</li>
+                </ul>
+            </li>
+            <li>再読込：画面強押し</li>
+        </ol>
+        
+        <h1 id="active">実行中タスク詳細画面</h1>
+        <img src="Watch_2_ActiveTask.png" width ="312"/>
+        <ol class="help">
+            <li>タスク終了</li>
+            <li>タスク中断</li>
+            <li>メモ追加</li>
+            <li>チェックリスト
+                <ul>
+                    <li>チェック：行選択</li>
+                    ※URLスキームを使用するチェック項目は選択できません。
+                </ul>
+            </li>
+        </ol>
+        
+        <h1 id="search">検索結果画面</h1>
+        <img src="Watch_3_Search.png" width ="312"/>
+        <ol class="help">
+            <li>新規タスク開始</li>
+            検索文字列をタスク名として、新規タスクを開始。リピートタスク設定無し。
+            <li>新規タスク追加</li>
+            検索文字列をタスク名として、新規タスクを追加。リピートタスク設定無し。
+            <li>タスク一覧</br>
+                検索文字列を含むタスク一覧。
+                <ul>
+                    <li>→<a href="#task">タスク詳細</a>：行選択</li>
+                    <li>タスク開始：スワイプ</li>
+                </ul>
+            </li>
+            <li>リピートタスク一覧</br>
+                検索文字列を含むリピートタスク一覧。
+                <ul>
+                    <li>→<a href="#repeat">リピートタスク詳細</a>：行選択</li>
+                    <li>タスク開始：スワイプ</li>
+                    リピートタスクを設定したタスクを作成して開始。
+                </ul>
+            </li>
+            <li>再読込：画面強押し</li>
+        </ol>
+        
+        <h1 id="task">タスク画面</h1>
+        <img src="Watch_4_Task.png" width ="312"/>
+        <ol class="help">
+            <li>タスク開始</li>
+        </ol>
+        
+        <h1 id="repeat">リピートタスク画面</h1>
+        <img src="Watch_5_RepeatTask.png" width ="312"/>
+        <ol class="help">
+            <li>タスク開始</li>
+            リピートタスクを設定したタスクを作成して開始。
+            <li>タスク追加</li>
+            リピートタスクを設定したタスクを作成。
+        </ol>
+        
+        <a href="top.html">→Help Topへ</a> <a href="/">→Taskuma Topへ</a>
+    </body>
+</html>
