@@ -32,8 +32,10 @@
         
         <h3>追加</h3>
         <p class = "breakAll">
-        taskuma://add?taskname=xxx&amp;estimated=xxx&amp;project=xxx&amp;repeat=xxx</p>
-        taskname, estimated, project, repeatは省略可能です。</br>
+        taskuma://add?taskname=xxx&amp;estimated=xxx&amp;date=xxx&amp;time=xxx&amp;project=xxx&amp;repeat=xxx</p>
+        taskname, estimated, date, time, project, repeatは省略可能です。</br>
+        dateはyyyyMMddまたはMMdd形式でタスク日付を指定します。指定しない場合、または正しい形式でない場合には、今日の日付となります。</br>
+        timeはHHmm形式でスケジュール時刻を指定します。</br>
         指定したプロジェクトが存在しない場合には、新規作成されます。</br>
         指定したリピートタスクが存在しない場合には、リピートは設定されません。同一名称のリピートタスクが複数ある場合には、順序が最小のものを取得します。</br>
         
@@ -55,7 +57,7 @@
         
         <h3>追加(コールバック)</h3>
         <p class = "breakAll">
-        taskuma://x-callback-url/add?x-source=XXXX&amp;x-success=XXXX&amp;taskname=xxx&amp;estimated=xxx&amp;project=xxx&amp;repeat=xxx</p>
+        taskuma://x-callback-url/add?x-source=XXXX&amp;x-success=XXXX&amp;taskname=xxx&amp;estimated=xxx&amp;date=xxx&amp;time=xxx&amp;project=xxx&amp;repeat=xxx</p>
         x-sourceは、コールバックするアプリの名称等を指定します。これは表示用です。</br>
         x-successで、コールバックするアプリのURLスキームを指定します。</br>
         
